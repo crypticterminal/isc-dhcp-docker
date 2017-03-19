@@ -1,9 +1,5 @@
 #!/bin/sh
 
 touch /var/lib/dhcp/dhcpd.leases
-
-if [ "$@" = "" ]; then
-  exec dhcpd -f -d $INTERFACES
-fi
-
+[ "$(printf '%s' "$@")" = "" ] && exec dhcpd -f -d $INTERFACES
 exec "$@"
