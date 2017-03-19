@@ -7,4 +7,4 @@ RUN apk add --update --no-cache dhcp && \
 
 VOLUME /var/lib/dhcp
 
-CMD ["dhcp", "-f", "-d", "$INTERFACES"]
+CMD ["dhcpd", "-f", "-d", "$INTERFACES"]
