@@ -3,7 +3,7 @@ FROM alpine:3.5
 ENV INTERFACES=
 
 RUN apk add --update --no-cache dhcp && \
-    touch /var/lib/dhcp/dhcp.leases
+    touch /var/lib/dhcp/dhcpd.leases
 
 VOLUME /var/lib/dhcp
 
